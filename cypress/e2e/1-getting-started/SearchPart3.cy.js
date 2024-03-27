@@ -4,6 +4,7 @@ describe('Search component', () => {
       cy.visit('https://stacksinfo.web.app');
       cy.get('.search-bar').should('be.visible');
     });
+
     it('Search with full company name' , ()=>{  
       cy.get('input[class="search-bar"]').type('Element Media');
       cy.wait(3000);
@@ -12,6 +13,7 @@ describe('Search component', () => {
             cy.wrap($item).should('contain', 'Element Media');
         });
     });
+    
     it('Search with first letter of company name' , ()=>{  
       cy.get('input[class="search-bar"]').type('I');
       cy.wait(3000);
