@@ -68,7 +68,11 @@ describe('Search component', () => {
       cy.get('.header-last > .remove-button').click();
     });
 
-
+    it('Remove all topics from last history search', () => {
+      cy.get('input[class="search-bar"]').type('front').type('{enter}');
+      cy.get('#root > div > div.navbar > div.search-bar-container > input').click();
+      cy.get('.header-last > .remove-button').click();
+    });
 
 
 
