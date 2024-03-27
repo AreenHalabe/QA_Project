@@ -129,6 +129,12 @@ describe('Search component', () => {
         cy.get('.title-not-fround').should('contain' , 'Oops, No Matches Found :(');
       });
 
+      it('check search at Language', () => {
+        cy.visit('https://stacksinfo.web.app'); 
+        cy.get('.search-bar').type('Flask')
+        cy.wait(3000);
+      });
+      
       it('check the result when search on Jenin' ,()=>{
         cy.visit('https://stacksinfo.web.app');  
         const SearchValue = 'Jenin';
